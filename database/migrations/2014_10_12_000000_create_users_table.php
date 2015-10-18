@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             //$table->string('fb_token');
             $table->string('email')->unique();
+            $table->string('FBlastAccessToken');
             $table->string('password', 60);
             $table->bigInteger('score');
             $table->rememberToken();
