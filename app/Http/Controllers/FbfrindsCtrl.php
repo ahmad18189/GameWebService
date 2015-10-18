@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\fbfrinds;
+use Carbon\Carbon;
 use Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -13,7 +14,9 @@ class FbfrindsCtrl extends Controller
     {
         //$fbf = fbfrinds::all();
        // $fbf = fbfrinds::latest()->get();
-       $fbf = fbfrinds::orderBy('id','desc')->get();
+        $fbf = fbfrinds::orderBy('id','desc')->get();
+       /// $fbf = fbfrinds::latest('id')->where('id','<=',3)->get();
+
         return view('fbfrinds.index')->with('fbfrinds',$fbf);
     }
     function show($id)
