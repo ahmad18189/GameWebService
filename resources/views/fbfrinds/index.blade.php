@@ -13,7 +13,9 @@
             </h2>
             <div class="body">
                 <div>{{$fbf->fb_id}}</div>
-                <div><img src="http://graph.facebook.com/{{$fbf->id}}/picture?type=square" alt="Bad ID"></div>
+                <div>"http://graph.facebook.com/{{$fbf->fb_id}}/picture?type=square"</div>
+
+                <div><img src="http://graph.facebook.com/{{$fbf->fb_id}}/picture?type=square" alt="Bad ID"></div>
             </div>
         </article>
 
