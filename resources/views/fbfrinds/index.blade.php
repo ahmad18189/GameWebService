@@ -12,7 +12,8 @@
 --> <a href="{{url('/fbfrinds',$fbf->id)}}">{{$fbf->id}}</a>
             </h2>
             <div class="body">
-                {{$fbf->fb_id}}
+                <div>{{$fbf->fb_id}}</div>
+                <div><img src="http://graph.facebook.com/{{$fbf->id}}/picture?type=square" alt="Bad ID"></div>
             </div>
         </article>
 
