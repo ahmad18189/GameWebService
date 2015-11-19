@@ -37,4 +37,9 @@ class FbfrindsCtrl extends Controller
         fbfrinds::create($input);
         return redirect("fbfrinds");
     }
+    function All()
+    {
+        $fbf = fbfrinds::orderBy('id','desc')->get();
+        return $fbf;
+    }
 }

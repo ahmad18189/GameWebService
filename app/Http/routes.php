@@ -21,5 +21,7 @@ Route::get('/about', "AboutCtrl@about");
 
 Route::get('/fbfrinds','FbfrindsCtrl@index');
 Route::get('/fbfrinds/create','FbfrindsCtrl@create');
+Route::get('/fbfrinds/all','FbfrindsCtrl@index');
+
 Route::get('/fbfrinds/{id}','FbfrindsCtrl@show');
 Route::post('/fbfrinds','FbfrindsCtrl@store');
