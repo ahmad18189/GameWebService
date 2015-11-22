@@ -42,4 +42,18 @@ class FbfrindsCtrl extends Controller
         $fbf = fbfrinds::orderBy('id','desc')->get();
         return $fbf;
     }
+
+    public function api_store(Request $request)
+    {
+        $id = $request->input('fb_id');
+        $user = new fb_user;
+        $user->fb_id=  $id;
+        $user->save();
+        //return Response::json($id, 200, array('Access-Control-Allow-Origin' => '*'));
+        //  return response()->$id->array('Access-Control-Allow-Origin' -> '*');
+        //   return Response::json("", 200, array('Access-Control-Allow-Origin' => '*'));
+
+        return $id;
+        //
+    }
 }
