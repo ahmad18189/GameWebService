@@ -21,6 +21,7 @@ Route::get('/about', "AboutCtrl@about");
 
 Route::get('/fbfrinds','FbfrindsCtrl@index');
 Route::get('/fbfrinds/create','FbfrindsCtrl@create');
+Route::post('/fbfrinds/api_store','FbfrindsCtrl@api_store');
 Route::get('/fbfrinds/all','FbfrindsCtrl@All');
 
 Route::get('/fbfrinds/{id}','FbfrindsCtrl@show');
