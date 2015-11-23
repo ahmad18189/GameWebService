@@ -3,10 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
 class fbfrinds extends Model
 {
-    protected $fillable = ['fb_id'];
+    protected $fillable = ['fb_id','score'];
 
     public function scopeFirst3($query)
     {

@@ -45,8 +45,8 @@ class FbfrindsCtrl extends Controller
 
     public function api_store(Request $request)
     {
-        $id = $request->input('fb_id');
-        $user = new fb_user;
+        $id = $request::get('fb_id');
+        $user = new fbfrinds();
         $user->fb_id=  $id;
         $user->save();
         //return Response::json($id, 200, array('Access-Control-Allow-Origin' => '*'));

@@ -15,6 +15,7 @@ class CreatFbfrinds extends Migration
         Schema::create('fbfrinds', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fb_id');
+            $table->integer('score');
             $table->timestamps();
         });
     }

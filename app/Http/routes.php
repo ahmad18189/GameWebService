@@ -12,12 +12,14 @@
 */
 
 Route::get('/', function () {
-    return "Dudaae?" ;
+    return "Dudaae?";
+
 });
 
 
 Route::get('/profile', "usersController@profile");
 Route::get('/about', "AboutCtrl@about");
+
 
 Route::get('/fbfrinds','FbfrindsCtrl@index');
 Route::get('/fbfrinds/create','FbfrindsCtrl@create');
@@ -26,3 +28,6 @@ Route::get('/fbfrinds/all','FbfrindsCtrl@All');
 
 Route::get('/fbfrinds/{id}','FbfrindsCtrl@show');
 Route::post('/fbfrinds','FbfrindsCtrl@store');
+
+Route::get('/api/store','ApiCalls@index');
+Route::post('/api/store','ApiCalls@store_user');
