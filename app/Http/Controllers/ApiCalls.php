@@ -15,7 +15,9 @@ class ApiCalls extends Controller
      */
     public function index()
     {
-        return "Mad !";
+        $fbf = fbfrinds::orderBy('id','desc')->get();
+
+        return $fbf;
     }
 
 
@@ -54,16 +56,16 @@ class ApiCalls extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update_score (Request $request, $id)
+
+    public function get_score(Request $request)
     {
-        //
+        $user = fbfrinds::where('fb_id', '=', $request::get('fb_id'))->first();
+
+        if ($user == null)
+        {
+            return array( 'score' =>'0');
+        }
+        return array( 'score' =>(string)$user['score']);
     }
 
 

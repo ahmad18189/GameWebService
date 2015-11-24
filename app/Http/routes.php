@@ -29,5 +29,6 @@ Route::get('/fbfrinds/all','FbfrindsCtrl@All');
 Route::get('/fbfrinds/{id}','FbfrindsCtrl@show');
 Route::post('/fbfrinds','FbfrindsCtrl@store');
 
-Route::get('/api/store','ApiCalls@index');
+Route::get('/api/all','ApiCalls@index');
 Route::post('/api/store','ApiCalls@store_user');
+Route::post('/api/get_score','ApiCalls@get_score');
